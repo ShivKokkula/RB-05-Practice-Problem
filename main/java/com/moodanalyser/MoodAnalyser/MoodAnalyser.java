@@ -1,13 +1,11 @@
 package com.moodanalyser.MoodAnalyser;
 
 public class MoodAnalyser {
-    public String anayseMood(String message) {
-        String analysedMood = message;
-        if(analysedMood.contains("sad"))
+    public String analyseMood(String message) {
+        String messageToBeAnalysed = message;
+        if(messageToBeAnalysed.contains("sad"))
             return "SAD";
-        else if(analysedMood.contains("happy"))
-            return "HAPPY";
         else
-            return "NO MOOD";
+            return "HAPPY";
     }
 }
