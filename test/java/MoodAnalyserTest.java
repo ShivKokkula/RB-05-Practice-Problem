@@ -35,4 +35,9 @@ public class MoodAnalyserTest {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
         Assertions.assertEquals("HAPPY",moodAnalyser.analyseMood());
     }
+    @Test
+    void givenNull_ShouldHandle_Exception() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        Assertions.assertEquals("HAPPY",moodAnalyser.analyseMood());
+    }
 }
