@@ -4,11 +4,13 @@ public class MoodAnalyser {
     public static String messageToBeAnalysed;
     public String analyseMood() {
         try {
+            if(messageToBeAnalysed == null || messageToBeAnalysed.isEmpty())
+                throw new MoodAnalysisException();
             if(messageToBeAnalysed.contains("sad"))
                 return "SAD";
             else
                 return "HAPPY";
-        }catch(Exception e){
+        }catch(MoodAnalysisException e){
             return "HAPPY";
         }
     }
